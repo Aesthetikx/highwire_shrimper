@@ -1,0 +1,18 @@
+module Zeitwerk
+  class Loader
+    def self.for_gem: (?warn_on_extra_files: boolish) -> Zeitwerk::GemLoader
+
+    def setup: () -> void
+  end
+
+  class GemLoader < Loader
+    attr_accessor inflector: GemInflector
+  end
+
+  class Inflector
+    def inflect: (Hash[String, String]) -> void
+  end
+
+  class GemInflector < Inflector
+  end
+end

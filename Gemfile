@@ -14,3 +14,5 @@ gem 'rubocop-rake'
 gem 'rubocop-rspec'
 
 gem 'steep'
+
+gem 'zeitwerk'

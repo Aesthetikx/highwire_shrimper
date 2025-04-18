@@ -133,6 +133,7 @@ GEM
       unicode-emoji (~> 4.0, >= 4.0.4)
     unicode-emoji (4.0.4)
     uri (1.0.3)
+    zeitwerk (2.7.2)
 
 PLATFORMS
   ruby
@@ -147,6 +148,7 @@ DEPENDENCIES
   rubocop-rake
   rubocop-rspec
   steep
+  zeitwerk
 
 BUNDLED WITH
    2.6.7

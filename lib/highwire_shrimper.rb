@@ -1,5 +1,12 @@
-require_relative 'highwire_shrimper/tui'
-require_relative 'highwire_shrimper/version'
+require 'zeitwerk'
+
+Zeitwerk::Loader.for_gem.tap do |loader|
+  inflections = { 'tui' => 'TUI' }
+
+  loader.inflector.inflect inflections
+
+  loader.setup
+end
 
 # HighwireShrimper is an IRC client and library.
 module HighwireShrimper
