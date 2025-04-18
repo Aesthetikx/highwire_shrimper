@@ -1,6 +1,8 @@
 require_relative 'highwire_shrimper/version'
 
+# HighwireShrimper is an IRC client and library.
 module HighwireShrimper
   class Error < StandardError; end
-  # Your code goes here...
+
+  def self.shrimp!; end
 end

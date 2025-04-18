@@ -3,4 +3,6 @@ module HighwireShrimper
 
   class Error < StandardError
   end
+
+  def self.shrimp!: -> void
 end

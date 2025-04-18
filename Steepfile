@@ -35,4 +35,5 @@ target :lib do
   signature 'sig'
 
   check 'lib'
+  check 'exe/highwire_shrimper'
 end
