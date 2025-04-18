@@ -1,0 +1,5 @@
+module HighwireShrimper
+  module TUI
+    def self.open!: -> void
+  end
+end
