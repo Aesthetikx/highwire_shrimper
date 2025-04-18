@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative "highwire_shrimper/version"
+require_relative 'highwire_shrimper/version'
 
 module HighwireShrimper
   class Error < StandardError; end
