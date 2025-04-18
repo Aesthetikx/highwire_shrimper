@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'highwire_shrimper'
 
 RSpec.configure do |config|
