@@ -1,0 +1,10 @@
+module HighwireShrimper
+  module IRC
+    class Channel
+      attr_reader server: Server
+      attr_reader name: String
+
+      def initialize: (server: Server, name: String) -> void
+    end
+  end
+end

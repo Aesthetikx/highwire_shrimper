@@ -1,7 +1,7 @@
 require 'zeitwerk'
 
 Zeitwerk::Loader.for_gem.tap do |loader|
-  inflections = { 'tui' => 'TUI' }
+  inflections = { 'irc' => 'IRC', 'tui' => 'TUI' }
 
   loader.inflector.inflect inflections
 

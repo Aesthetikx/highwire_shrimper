@@ -1,0 +1,4 @@
+module HighwireShrimper
+  module IRC
+  end
+end
