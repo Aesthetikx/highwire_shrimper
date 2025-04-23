@@ -2,10 +2,10 @@ module HighwireShrimper
   module IRC
     class Server
       attr_reader name: String
-      attr_reader hostname: String
+      attr_reader hostname: ServerName
       attr_reader port: Integer
 
-      def initialize: (name: String, hostname: String, port: Integer) -> void
+      def initialize: (name: String, hostname: ServerName, port: Integer) -> void
     end
   end
 end
