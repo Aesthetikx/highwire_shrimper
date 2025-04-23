@@ -1,0 +1,18 @@
+module HighwireShrimper
+  module IRC
+    class ServerName
+      class InvalidServerNameError < Error
+      end
+
+      RFC_1123_REGEX: String
+
+      attr_reader name: String
+
+      def initialize: (String) -> void
+
+      private
+
+      def valid?: () -> bool
+    end
+  end
+end
