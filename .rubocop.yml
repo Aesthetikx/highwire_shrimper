@@ -6,5 +6,8 @@ AllCops:
   NewCops: enable
   TargetRubyVersion: 3.2
 
+Style/SignalException:
+  EnforcedStyle: semantic
+
 Style/FrozenStringLiteralComment:
   Enabled: false
