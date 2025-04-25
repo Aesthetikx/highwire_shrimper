@@ -4,6 +4,10 @@ module HighwireShrimper
       class InvalidServerNameError < Error
       end
 
+      module KernelMethods
+        def ServerName: (server_identifier?) -> ServerName?
+      end
+
       RFC_1123_REGEX: String
 
       attr_reader name: String

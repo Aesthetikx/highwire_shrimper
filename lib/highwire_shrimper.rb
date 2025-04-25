@@ -16,3 +16,5 @@ module HighwireShrimper
     TUI.open!
   end
 end
+
+Kernel.include HighwireShrimper::IRC::ServerName::KernelMethods

@@ -4,6 +4,17 @@ module HighwireShrimper
     class ServerName
       class InvalidServerNameError < Error; end
 
+      module KernelMethods # rubocop:disable Style/Documentation
+        def ServerName(name) # rubocop:disable Naming/MethodName
+          case name
+          when ServerName
+            name
+          when String
+            ServerName.new name
+          end
+        end
+      end
+
       RFC_1123_REGEX = /
         \A
         (?=.{1,255}\z)                  # The entire length must be between 1 and 255 characters

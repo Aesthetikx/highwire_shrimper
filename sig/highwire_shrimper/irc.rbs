@@ -1,4 +1,5 @@
 module HighwireShrimper
   module IRC
+    type server_identifier = ServerName | String
   end
 end

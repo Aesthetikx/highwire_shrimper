@@ -5,7 +5,7 @@ module HighwireShrimper
       attr_reader hostname: ServerName
       attr_reader port: Integer
 
-      def initialize: (name: String, hostname: ServerName, port: Integer) -> void
+      def initialize: (name: String, hostname: server_identifier, port: Integer) -> void
     end
   end
 end

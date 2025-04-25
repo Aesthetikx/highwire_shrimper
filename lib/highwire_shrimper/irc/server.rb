@@ -6,7 +6,7 @@ module HighwireShrimper
 
       def initialize(name:, hostname:, port:)
         @name = name
-        @hostname = hostname
+        @hostname = ServerName(hostname)
         @port = port
       end
     end

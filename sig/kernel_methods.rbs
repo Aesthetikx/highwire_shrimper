@@ -1,0 +1,4 @@
+module Kernel
+  # TODO: Use include HighwireShrimper::IRC::ServerName::KernelMethods?
+  def ServerName: (HighwireShrimper::IRC::ServerName | String | nil) -> HighwireShrimper::IRC::ServerName?
+end
