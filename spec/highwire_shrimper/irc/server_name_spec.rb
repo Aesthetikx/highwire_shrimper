@@ -1,4 +1,4 @@
-RSpec.describe HighwireShrimper::IRC::ServerName do
+describe HighwireShrimper::IRC::ServerName do
   describe '#valid?' do
     [
       'irc.example.com',        # Standard dot-separated name

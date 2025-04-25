@@ -1,4 +1,4 @@
-RSpec.describe HighwireShrimper do
+describe HighwireShrimper do
   it 'has a version number' do
     expect(HighwireShrimper::VERSION).not_to be_nil
   end
