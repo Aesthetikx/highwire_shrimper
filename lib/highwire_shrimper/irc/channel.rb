@@ -8,6 +8,8 @@ module HighwireShrimper
         @server = server
         @name = name
       end
+
+      alias to_s name
     end
   end
 end
