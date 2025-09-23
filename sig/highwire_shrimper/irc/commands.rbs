@@ -1,0 +1,56 @@
+module HighwireShrimper
+  module IRC
+    module Commands
+      class Join
+        type key = String # TODO: Validation class
+
+        attr_reader channels: Array[Channel]
+        attr_reader keys: Array[key]
+
+        def initialize: (
+          ?channels: Channel | Array[Channel],
+          ?keys: key | Array[key],
+          ?leave_all: bool
+        ) -> void
+
+        def leave_all?: () -> bool
+      end
+
+      class Nick
+        type nickname = String # TODO: Validation class
+
+        attr_reader nickname: nickname
+
+        def initialize: (nickname: nickname) -> void
+      end
+
+      class Ping
+        attr_reader server1: ServerName
+        attr_reader server2: ServerName?
+
+        def initialize: (server1: server_identifier, ?server2: server_identifier) -> void
+      end
+
+      class Pong
+        attr_reader server1: ServerName
+        attr_reader server2: ServerName?
+
+        def initialize: (server1: server_identifier, ?server2: server_identifier) -> void
+      end
+
+      class User
+        type user = String # TODO: Validation class
+        type realname = String # TODO: Validation class
+
+        attr_reader user: user
+        attr_reader realname: realname
+
+        def initialize: (user: user, realname: realname) -> void
+
+        def mode: () -> String
+
+        def unused: () -> String
+      end
+    end
+  end
+end
