@@ -2,10 +2,8 @@ module HighwireShrimper
   module IRC
     module Commands
       class Join
-        type key = String # TODO: Validation class
-
         attr_reader channels: Array[Channel]
-        attr_reader keys: Array[key]
+        attr_reader keys: Array[Types::Key]
 
         def initialize: (
           ?channels: Channel | Array[Channel],

@@ -8,6 +8,7 @@ module HighwireShrimper
         def initialize(channels: [], keys: [], leave_all: false)
           @channels = Array(channels)
           @keys = Array(keys)
+          @keys = @keys.map { |value| Key value }
           @leave_all = leave_all
         end
 

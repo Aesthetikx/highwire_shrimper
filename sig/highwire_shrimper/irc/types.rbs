@@ -4,6 +4,22 @@ module HighwireShrimper
       class InvalidFormatError < Error
       end
 
+      class Key
+        module KernelMethods
+          def Key: (Object) -> Key
+        end
+
+        RFC_2812_KEY_REGEX: String
+
+        attr_reader value: String
+
+        def initialize: (String) -> void
+
+        private
+
+        def valid?: () -> bool
+      end
+
       class ServerName
         module KernelMethods
           def ServerName: (Object) -> ServerName

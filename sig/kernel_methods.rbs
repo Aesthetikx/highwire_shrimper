@@ -1,4 +1,5 @@
 module Kernel
   # TODO: Use include HighwireShrimper::IRC::ServerName::KernelMethods?
   def ServerName: (Object) -> HighwireShrimper::IRC::Types::ServerName
+  def Key: (Object) -> HighwireShrimper::IRC::Types::Key
 end
