@@ -1,5 +1,5 @@
 module HighwireShrimper
   module IRC
-    type server_identifier = ServerName | String
+    type server = Types::ServerName | String
   end
 end

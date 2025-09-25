@@ -7,7 +7,7 @@ module HighwireShrimper
 
         def initialize(server1:, server2: nil)
           @server1 = ServerName server1
-          @server2 = ServerName server2
+          @server2 = ServerName server2 if server2
         end
 
         def to_s

@@ -5,7 +5,7 @@ module HighwireShrimper
       end
 
       module KernelMethods
-        def ServerName: (server_identifier?) -> ServerName?
+        def ServerName: (server?) -> ServerName?
       end
 
       RFC_1123_REGEX: String

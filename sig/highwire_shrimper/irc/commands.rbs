@@ -25,17 +25,17 @@ module HighwireShrimper
       end
 
       class Ping
-        attr_reader server1: ServerName
-        attr_reader server2: ServerName?
+        attr_reader server1: Types::ServerName
+        attr_reader server2: Types::ServerName?
 
-        def initialize: (server1: server_identifier, ?server2: server_identifier) -> void
+        def initialize: (server1: server, ?server2: server) -> void
       end
 
       class Pong
-        attr_reader server1: ServerName
-        attr_reader server2: ServerName?
+        attr_reader server1: Types::ServerName
+        attr_reader server2: Types::ServerName?
 
-        def initialize: (server1: server_identifier, ?server2: server_identifier) -> void
+        def initialize: (server1: server, ?server2: server) -> void
       end
 
       class User

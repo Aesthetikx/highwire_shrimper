@@ -1,4 +1,4 @@
-describe HighwireShrimper::IRC::ServerName do
+describe HighwireShrimper::IRC::Types::ServerName do
   describe '#valid?' do
     [
       'irc.example.com',        # Standard dot-separated name
@@ -35,7 +35,7 @@ describe HighwireShrimper::IRC::ServerName do
       it "does not consider '#{bad_example}' to be valid" do
         expect do
           described_class.new bad_example
-        end.to raise_error(HighwireShrimper::IRC::ServerName::InvalidServerNameError)
+        end.to raise_error(HighwireShrimper::IRC::Types::InvalidFormatError)
       end
     end
   end

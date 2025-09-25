@@ -1,0 +1,24 @@
+module HighwireShrimper
+  module IRC
+    module Types
+      class InvalidFormatError < Error
+      end
+
+      class ServerName
+        module KernelMethods
+          def ServerName: (Object) -> ServerName
+        end
+
+        RFC_1123_REGEX: String
+
+        attr_reader name: String
+
+        def initialize: (String) -> void
+
+        private
+
+        def valid?: () -> bool
+      end
+    end
+  end
+end

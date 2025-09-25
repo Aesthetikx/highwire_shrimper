@@ -17,4 +17,4 @@ module HighwireShrimper
   end
 end
 
-Kernel.include HighwireShrimper::IRC::ServerName::KernelMethods
+Kernel.include HighwireShrimper::IRC::Types::ServerName::KernelMethods
