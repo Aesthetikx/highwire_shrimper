@@ -42,10 +42,10 @@ module HighwireShrimper
         value = value.reduce :merge
 
         {
-          prefix: value[:_message_1],
+          **value[:_message_1],
           command: value[:command],
           **value[:_message_2]
-        }
+        }.compact
       end
 
       production :_message_3 do |value|
@@ -56,9 +56,10 @@ module HighwireShrimper
         value = value.reduce :merge
 
         {
+          server: value[:servername],
           nickname: value[:nickname],
           **value[:_prefix_3]
-        }
+        }.compact
       end
 
       production :_prefix_3 do |value|
@@ -74,16 +75,20 @@ module HighwireShrimper
         deep_values[value].last
       end
 
+      production :servername do |value|
+        value.reduce(:merge)[:hostname]
+      end
+
+      production :hostname do |value|
+        deep_values[value].join
+      end
+
       production :nickname do |value|
         deep_values[value].join
       end
 
       production :user do |value|
         value.join
-      end
-
-      production :host do |value|
-        deep_values[value].join
       end
 
       production :shortname do |value|
