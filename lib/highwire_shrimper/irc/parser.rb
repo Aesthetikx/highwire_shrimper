@@ -15,7 +15,7 @@ module HighwireShrimper
 
         abnf = EBNF.parse grammar, format: :abnf
 
-        @rules = abnf.make_peg.ast
+        @the_rules = abnf.make_peg.ast
       end
 
       def evaluate(input)
@@ -24,7 +24,7 @@ module HighwireShrimper
 
         options = { whitespace: '', logger: }
 
-        parse input, :message, @rules, **options
+        parse input, :message, @the_rules, **options
       end
 
       deep_values = lambda do |object|
