@@ -6,7 +6,7 @@ module HighwireShrimper
   module IRC
     # An implementation of a ENBF::PEG::Parser for RFC 2812
     class Parser
-      GRAMMAR_PATH = File.join __dir__, 'parser', 'rfc2812.abnf'
+      GRAMMAR_PATH = File.join __dir__.to_s, 'parser', 'rfc2812.abnf'
 
       include EBNF::PEG::Parser
 

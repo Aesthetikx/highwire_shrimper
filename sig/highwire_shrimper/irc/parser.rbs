@@ -1,0 +1,14 @@
+module HighwireShrimper
+  module IRC
+    class Parser
+      include EBNF::PEG::Parser
+      extend EBNF::PEG::Parser::ClassMethods
+
+      GRAMMAR_PATH: String
+
+      type parsed_element = String | Array[String] | Hash[String, String]
+
+      def evaluate: (String) -> Hash[Symbol, parsed_element]
+    end
+  end
+end

@@ -1,0 +1,31 @@
+module EBNF
+  class Base
+    include PEG
+
+    attr_reader ast: [Rule]
+  end
+
+  module PEG
+    def make_peg: () -> Base
+
+    module Parser
+      def parse: (
+        String?,
+        Symbol?,
+        Array[Rule]?,
+        ?insensitive_strings: boolish
+      ) -> untyped
+
+      module ClassMethods
+        def production: (Symbol, ?clear_packrat: boolish) {
+          (untyped, Hash[untyped, untyped], Proc, Hash[untyped, untyped]) -> Object
+        } -> void
+      end
+    end
+  end
+
+  class Rule
+  end
+
+  def self.parse: (String, Hash[Symbol, Object]?) -> Base
+end
